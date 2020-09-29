@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool visited[n + 1],order[n + 1];
+bool visited[1000001],order[1000001];
 
 void DFS(int n,vector<int> v[], int node){
     stack <int> st;
