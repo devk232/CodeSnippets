@@ -23,7 +23,6 @@ void BFS(int n,vector<int> v[], int node){
                 a.push_back(i);
                 pre[i] = cur;
                 q.push(i);
-
             }
         }
     }

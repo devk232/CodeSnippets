@@ -18,9 +18,11 @@ int main(){
             }
         }
     }
+    for(int i = 0; i < n; i++)
+        dis[i][i] = false;
 // dis[i][j] in the kth iteration denotes minimun distance between vertex i and j 
 //such that only first k vertices are used between these two edges.
-    for(int k = 1; k < n + 1; k++){
+    for(int k = 0; k < n; k++){
         for(int  i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
                 dis[i][j] = min(dis[i][j], dis[i][k] + dis[k][j]);
