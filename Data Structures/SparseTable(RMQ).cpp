@@ -22,11 +22,11 @@ int main() {
   }
   for (int j = 1; j < LOG; j++) {
     for (int i = 0; i + (1 << j) - 1 < n; i++) {
-      x[i][j] = min (x[i][j - 1], x[i + (1 <<(j - 1))][j - 1]);
+      x[i][j] = min (x[i][j - 1], x[i + (1<<(j - 1))][j - 1]);
     }
   }
 
-  while (q --) {
+  while (q --) { 
     int l, r;
     cin >> l >> r;
     l--; r--;
