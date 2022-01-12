@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int Bfs(int n, vector<pair<int, int>> adj[], int node)
-{
+int Bfs(int n, vector<pair<int, int>> adj[], int node) {
     int pre[n + 1], dis[n + 1];
     deque<int> dq;
     dq.push_back(node);
