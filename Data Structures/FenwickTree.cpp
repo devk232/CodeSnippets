@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int long long 
-
+#define int long long
 
 int n, q;
 vector<int> tree;
 
-void add (int k, int r) {
+void add(int k, int r) {
   while (k <= n) {
     tree[k] += r;
     k += k & (-k);
@@ -14,15 +13,14 @@ void add (int k, int r) {
 }
 
 // returns sum(1, k)
-int sum (int k) {
+int sum(int k) {
   int s = 0;
   while (k >= 1) {
-    s +=  tree[k];
+    s += tree[k];
     k -= k & (-k);
   }
   return s;
 }
-
 
 signed main() {
   cin >> n >> q;
@@ -39,9 +37,9 @@ signed main() {
       add(b, c - a[b]);
       a[b] = c;
     } else {
-      cout <<  sum(c) - sum(b - 1) << endl;
+      cout << sum(c) - sum(b - 1) << endl;
     }
   }
-} 
- 
+}
+
 // problem - https://cses.fi/problemset/task/1648/
